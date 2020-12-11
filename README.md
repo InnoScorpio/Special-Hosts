@@ -6,6 +6,8 @@ Adblock filters and blocklists I have created.
 
 ## Types of Lists 
 
+* [`/Anti-Telemetry/`](https://github.com/InnoScorpio/Special-Hosts/tree/master/Anti-Telemetry) - Lists of filters intended to block telemetry domains. 
+
 * [`/Attributed/`](https://github.com/InnoScorpio/Special-Hosts/tree/master/Attributed) - List of filters from other users provided in their intended form.
 
 * [`/Blocklists/`](https://github.com/InnoScorpio/Special-Hosts/tree/master/Blocklists) - List of filters for specific purpose, corporation, or group of domains.
