@@ -1,0 +1,14 @@
+! Title: Anti-Stealth List for Adguard
+! Expires: 8 hours
+! Last Modified: September 27, 2020
+! Source: 
+! Description: Anti-Stealth List for Adguard.
+! Use them at your own risk.
+! ===============================================================================================
+! Some rules from https://github.com/Cybo1927/Hosts/blob/master/Hosts
+@@||googlevideo.com^$stealth
+@@||accounts.google.^$stealth
+@@||instructure.com^$stealth
+@@||blindsidenetworks.com^$stealth
+@@||docs.google.^$stealth
+@@||galanz.com^$stealth

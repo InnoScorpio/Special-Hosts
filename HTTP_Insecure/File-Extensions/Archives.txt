@@ -1,0 +1,25 @@
+[uBlock Origin]
+! Title: HTTP Insecure File Extensions - Archives
+! License: The Unlicense (https://choosealicense.com/licenses/unlicense/)
+! Homepage: https://github.com/InnoScorpio/Special-Hosts
+! Issues: https://github.com/InnoScorpio/Special-Hosts
+! Expires: 8 hours
+! Version: 09.03.2020
+! Last Modified: September 3, 2020
+! Description: Not comprehensive or exhaustive. Archive File Extensions. Block dangerous content that can be manipulated through HTTP connections and potentially harmful to devices. Supports uBlock Origin and Adguard.
+! Use them at your own risk.
+! ============================================================================
+!#if ext_ublock
+! Due to uBlock Origin limitations, the rules below can only block URLs with the specific file extension only containing HTML content.
+! Common Archive file extensions: 7z, arj, deb, pkg, rar, rpm, tar.gz, gz, tar, z, zip, odex, dex, iso, img, so, dmg, nrg, tc
+/^http://.+(/.+)?/.+\.(?:(?:[7][Zz])|(?:[aA][rR][jJ])|(?:[dD][eE][bB])|(?:[pP][kK][gG])|(?:[gG][zZ])|(?:[rR][aA][rR])|(?:[tT][aA][rR]([.][gG][zZ])?)|(?:[zZ]([iI][pP])?)|(?:[oO]?[dD][eE][xX])|(?:[iI]?[sS][oO])|(?:([iI]|[dD])[mM][gG])|(?:[nN][rR][gG])|(?:[tT][cC]))([/#?].*)?$/$all
+! Other Known Archive file extensions: lz, lzip, lzh, lha, lzx, vhd, vhdx, xpi, crx, tgz, bz2, bzip2, bz, bzip, cab, ipa, xap, sis, sisx
+/^http://.+(/.+)?/.+\.(?:(?:[[lL][zZ]([iI][pP]|[xX]|[hH])?)|(?:[lL][hH][aA])|(?:[tT][gG][zZ])|(?:[vV][hH][dD][xX]?)|(?:[xX][pP][iI])|(?:[cC][rR][xX])|(?:[bB][zZ]([iI][pP])?[[2]?)|(?:[cC][aA][bB])|(?:[iI][pP][aA])|(?:[xX][aA][pP])|(?:[sS][iI][sS][xX]?))([/#?].*)?$/$all
+!#endif
+
+!#if adguard
+! Common Archive file extensions: 7z, arj, deb, pkg, rar, rpm, tar.gz, gz, tar, z, zip, odex, dex, iso, img, so, dmg, nrg, tc
+/^http://.+(/.+)?/.+\.(?:(?:[7][Zz])|(?:[aA][rR][jJ])|(?:[dD][eE][bB])|(?:[pP][kK][gG])|(?:[gG][zZ])|(?:[rR][aA][rR])|(?:[tT][aA][rR]([.][gG][zZ])?)|(?:[zZ]([iI][pP])?)|(?:[oO]?[dD][eE][xX])|(?:[iI]?[sS][oO])|(?:([iI]|[dD])[mM][gG])|(?:[nN][rR][gG])|(?:[tT][cC]))([/#?].*)?$/$empty
+! Other Known Archive file extensions: lz, lzip, lzh, lha, lzx, vhd, vhdx, xpi, crx, tgz, bz2, bzip2, bz, bzip, cab, ipa, xap, sis, sisx
+/^http://.+(/.+)?/.+\.(?:(?:[[lL][zZ]([iI][pP]|[xX]|[hH])?)|(?:[lL][hH][aA])|(?:[tT][gG][zZ])|(?:[vV][hH][dD][xX]?)|(?:[xX][pP][iI])|(?:[cC][rR][xX])|(?:[bB][zZ]([iI][pP])?[[2]?)|(?:[cC][aA][bB])|(?:[iI][pP][aA])|(?:[xX][aA][pP])|(?:[sS][iI][sS][xX]?))([/#?].*)?$/$empty
+!#endif

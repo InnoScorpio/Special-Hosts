@@ -1,0 +1,13 @@
+! Behind-the-Scene Mitigation for uBlock Origin
+! Behind-the-scene network requests are network requests which uBlock or uMatrix cannot associate with a specific tab in your browser. These can be abused by extensions in your web browser or made by web pages using navigator.sendBeacon(), hyperlink auditing, etc. 
+! This list can cause unintended consequences.
+! =======================================================================================================================================
+! See https://github.com/gorhill/uBlock/wiki/Behind-the-scene-network-requests for guidance.
+no-large-media: behind-the-scene true
+behind-the-scene * * block
+behind-the-scene * 1p-script block
+behind-the-scene * 3p block
+behind-the-scene * 3p-frame block
+behind-the-scene * 3p-script block
+behind-the-scene * image block
+behind-the-scene * inline-script block

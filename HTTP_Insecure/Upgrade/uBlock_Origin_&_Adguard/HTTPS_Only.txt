@@ -1,0 +1,17 @@
+! Title: HTTP Insecure Upgrade - HTTPS Only for uBlock Origin and Adguard
+! License: The Unlicense (https://choosealicense.com/licenses/unlicense/)
+! Homepage: https://github.com/InnoScorpio/Special-Hosts
+! Issues: https://github.com/InnoScorpio/Special-Hosts
+! Expires: 8 hours
+! Version: 2 (Last Date Indicated as Version - 06.17.2020)
+! Last Modified: June 20, 2020, 04:42 UTC
+! Description: Intended for uBlock Origin and Adguard. Enforces HTTPS Only Browsing. This is useful for online banking and sensitive tasks.
+! Related: Cybo1927 (https://raw.githubusercontent.com/Cybo1927/Hosts/master/Anti/Anti%20Third-Party%20HTTP)
+! Use them at your own risk.
+! ====================================================================================================================
+! Blocks all HTTP websites.
+http://*^$all 
+! Try To Make HTTP Links HTTPS (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests)
+||*^$csp=upgrade-insecure-requests;
+! Block 'Mixed Content' / Loading Of HTTP On HTTPS Sites (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content)
+||*^$csp=block-all-mixed-content;

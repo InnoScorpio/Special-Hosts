@@ -1,0 +1,24 @@
+[uBlock Origin]
+! Title: HTTP Insecure File Extensions - Media
+! License: The Unlicense (https://choosealicense.com/licenses/unlicense/)
+! Homepage: https://github.com/InnoScorpio/Special-Hosts
+! Issues: https://github.com/InnoScorpio/Special-Hosts
+! Expires: 8 hours
+! Version: 09.03.2020
+! Last Modified: September 3, 2020
+! Description: Not comprehensive or exhaustive. Audio and video file extensions. Block dangerous content that can be manipulated through HTTP connections and potentially harmful to devices. Supports uBlock Origin and Adguard.
+! Use them at your own risk.
+! ====================================================================================================================
+!#if ext_ublock
+! Audio File extensions: aif, aiff, cda, mid, midi, mp3, mpa, ogg, wav, wma, wpl, gsm, oga, mogg, opus, flac, pcm
+/^http://.+(/.+)?/.+\.(?:(?:[aA][iI][fF][fF]?)|(?:[cC][dD][aA])|(?:[mM][iI][dD][iI]?)|(?:[mM][pP]([3]|[aA]))|(?:[mM]?[oO][gG][gG])|(?:[oO][pP][uU][sS])|(?:[pP][cC][mM])|(?:[wW][aA][vV])|(?:[vV][mM][aA])|(?:[gG][sS][mM])|(?:[wW][pP][lL])|(?:[fF][lL][aA][cC]))([/#?].*)?$/$all
+! Video File extensions: 3p2, 3gp, 3gpp, 3gpp2, avi, flv, m4v, m4p, mkv, mov, mp4, mp2, mpg, mpeg, rm, swf, vob, wmv, qt, avchd
+/^http://.+(/.+)?/.+\.(?:(?:[3][pP][2])|(?:[qQ][tT])|(?:[aA][vV][cC][hH][dD])|(?:[3][gG][pP][pP]?[2]?)|(?:[aA][vV][iI])|(?:[fF][lL][vV])|(?:[mM][4]([vV]|[pP]))|(?:[mM][kK][vV])|(?:[mM][oO][vV])|(?:[mM][pP]([4]|[2]|[v]|[e]))|(?:[mM][pP][eE]?[gG])|(?:[rR][mM])|(?:[sS][wW][fF])|(?:[vV][oO][bB])|(?:[wW][eE][bB][mM])|(?:[vV][mM][vV]))([/#?].*)?$/$all
+!#endif
+
+!#if adguard
+! Audio File extensions: aif, aiff, cda, mid, midi, mp3, mpa, ogg, wav, wma, wpl, gsm, oga, mogg, opus, flac, pcm
+/^http://.+(/.+)?/.+\.(?:(?:[aA][iI][fF][fF]?)|(?:[cC][dD][aA])|(?:[mM][iI][dD][iI]?)|(?:[mM][pP]([3]|[aA]))|(?:[mM]?[oO][gG][gG])|(?:[oO][pP][uU][sS])|(?:[pP][cC][mM])|(?:[wW][aA][vV])|(?:[vV][mM][aA])|(?:[gG][sS][mM])|(?:[wW][pP][lL])|(?:[fF][lL][aA][cC]))([/#?].*)?$/$empty
+! Video File extensions: 3p2, 3gp, 3gpp, 3gpp2, avi, flv, m4v, m4p, mkv, mov, mp4, mp2, mpg, mpeg, rm, swf, vob, wmv, qt, avchd
+/^http://.+(/.+)?/.+\.(?:(?:[3][pP][2])|(?:[qQ][tT])|(?:[aA][vV][cC][hH][dD])|(?:[3][gG][pP][pP]?[2]?)|(?:[aA][vV][iI])|(?:[fF][lL][vV])|(?:[mM][4]([vV]|[pP]))|(?:[mM][kK][vV])|(?:[mM][oO][vV])|(?:[mM][pP]([4]|[2]|[v]|[e]))|(?:[mM][pP][eE]?[gG])|(?:[rR][mM])|(?:[sS][wW][fF])|(?:[vV][oO][bB])|(?:[wW][eE][bB][mM])|(?:[vV][mM][vV]))([/#?].*)?$/$empty
+!#endif

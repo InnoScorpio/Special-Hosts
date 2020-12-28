@@ -1,0 +1,42 @@
+[uBlock Origin]
+! Title: uBlock Origin Attribute Tracking and Bypass Mitigation List
+! License: The Unlicense (https://choosealicense.com/licenses/unlicense/)
+! Homepage: https://github.com/InnoScorpio/Special-Hosts
+! Issues: https://github.com/InnoScorpio/Special-Hosts
+! Expires: 10 days
+! Version: 06.09.2020
+! Last Modified: June 20, 2020, 04:42 UTC
+! Description: Includes a list of rules to prevent ad and tracking servers from compromising your privacy or bypassing uBlock Origin or Nano Adblocker.
+! Atrribution: Cybo1927 (https://raw.githubusercontent.com/Cybo1927/Hosts/master/Hosts)
+! Use them at your own risk.
+! =======================================================================================================================================
+! uBlock Origin. This list will improve overtime.
+! Cybo1927 >> This avoids prefecting all together, this is the rule you will need the most.
+||*^$csp=prefetch-src 'none'
+! Remove Attribute Tracking (uBlock Origin)
+*##+js(ra, ping)
+*##+js(ra, referrerpolicy)
+*##+js(ra, rel, link[rel*="pingback"])
+*##+js(ra, onclick, a[onclick*="ga"])
+*##+js(ra, onclick, a[onclick*="_gaq.push"])
+*##+js(ra, onclick, a[onclick*="dataLayer.push"])
+*##+js(ra, onclick, [onclick*="track"])
+*##+js(ra, data-google-query-id, a[data-google-query-id])
+*##+js(ra, data-obtrack, a[data-obtrack])
+*##+js(ra, data-oburl, a[data-oburl])
+*##+js(ra, href, a[href*="javascript:void(0);])
+! These two rules replicate the same privacy settings for blocking prefetching from uBlock Origin or Nano Defender for Adguard for Desktop and Adguard for Android. 
+*##+js(ra, rel, link[rel*="next"])
+*##+js(ra, rel, link[rel*="prefetch"])
+! These rules are relevant for Adguard for Desktop, Android, and iOS, work on all domains, not just blocked domains.
+*##+js(ra, rel, link[rel*="preconnect"])
+*##+js(ra, rel, link[rel*="preload"])
+*##+js(ra, rel, link[rel*="dns-prefetch"])
+! Associated with pings
+! *##+js(ra, rel, link[rel*="pingback"])
+! Other prefetching techniques
+*##+js(ra, rel, link[rel*="subresource"])
+*##+js(ra, rel, link[rel*="prev"])
+*##+js(ra, rel, link[rel*="prerender"])
+! Block ping and hyperlink auditing for uBlock Origin.
+||*$ping

@@ -1,0 +1,16 @@
+! Title: Adguard Adblocker Extension Bypass Mitigation List
+! License: The Unlicense (https://choosealicense.com/licenses/unlicense/)
+! Homepage: https://github.com/InnoScorpio/Special-Hosts
+! Issues: https://github.com/InnoScorpio/Special-Hosts
+! Expires: 5 days
+! Version: 05.13.2020-Rev1
+! Last Modified: June 20, 2020, 04:42 UTC
+! Description: Includes a list of rules to prevent ad and tracking servers from compromising your privacy or bypassing Adguard Adblocker Extension.
+! Atrribution: Cybo1927 (https://raw.githubusercontent.com/Cybo1927/Hosts/master/Hosts)
+! Use them at your own risk.
+! =======================================================================================================================================
+! Not all rules will with every Adguard software program just simply import the filter for Adguard software. This list will improve overtime.
+! This avoids prefecting all together, this is the rule you will need the most.
+||*^$csp=prefetch-src 'none'
+! This rule is responsible for mitigating hyperlink auditing and pings. 
+||*$ping

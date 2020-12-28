@@ -1,0 +1,101 @@
+[AdBlockPlus 3.5]
+! Title: Fact Checking Blocklist
+! Expires: 8 hours
+! License: The Unlicense (https://choosealicense.com/licenses/unlicense/)
+! Homepage: https://github.com/InnoScorpio/Special-Hosts
+! Issues: https://github.com/InnoScorpio/Special-Hosts
+! Version: 2
+! Last Modified: September 2, 2020
+! Description: Incomplete. Blocklist of fact-checking websites. 
+! Use them at your own risk.
+! ====================================================================================================================================================================================
+||abc.net.au/news/factcheck^
+||adfontesmedia.com^
+||africacheck.org^
+||agenciabrasil.ebc.com.br/tags/fake-news^
+||altnews.in^
+||aosfatos.org^
+||apnews.com/APFactCheck^
+||bbc.com/news/reality_check^
+||blackdotresearch.sg^
+||blogs.oglobo.globo.com/eissomesmo^
+||boatos.org^
+||boliviaverifica.bo^
+||boomlive.in^
+||bufale.net^
+||captainfact.io^
+||channel4.com/news/factcheck^
+||chequeado.com^
+||climatefeedback.org^
+||cnnchile.com/chilecheck^
+||congressoemfoco.uol.com.br^
+||correctiv.org^
+||debunk.eu^
+||demagog.org.pl^
+||demaskuok.lt^
+||e-farsas.com^
+||ellinikahoaxes.gr^
+||factcheck.ge^
+||factcheck.org^
+||factchecker.gr^
+||factcheckni.org^
+||factcrescendo.com^
+||facthunt.in^
+||factly.in^
+||factscan.ca^
+||factual.ro^
+||factuel.afp.com^
+||fakenews.pl^
+||faktisk.no^
+||faktograf.hr^
+||faktyoxla.info^
+||fatabyyano.net^
+||fip.am^
+||fullfact.org^
+||gomaneh.net^
+||gossipcop.com^
+||hoax-slayer.com^
+||hoaxes.org^
+||hoaxmap.org^
+||indiatoday.in/fact-check^
+||jcej.info^
+||laprensa.com.bo^
+||lemonde.fr/les-decodeurs^
+||mediabiasfactcheck.com^
+||mimikama.at^
+||miniver.org^
+||newschecker.in^
+||newsmobile.in^
+||newtral.es^
+||nieuwscheckers.nl^
+||norumors.net^
+||noticias.uol.com.br/confere^
+||observador.pt^
+||oko.press^
+||opindia.com^
+||our.news^
+||pagellapolitica.it^
+||piaui.folha.uol.com.br/lupa^
+||politifact.com^
+||polygraph.info^
+||poynter.org^
+||projetocomprova.com.br^
+||quoteinvestigator.com^
+||realclearpolitics.com^
+||sebenarnya.my^
+||smhoaxslayer.com^
+||snopes.com^
+||stopfake.org^
+||stopfals.md^
+||straightdope.com^
+||tfc-taiwan.org.tw^
+||theferret.scot/fact-check^
+||thequint.com/topic/webqoof^
+||thewhistle.co.il^
+||thip.media^
+||truthorfiction.com^
+||usafacts.org^
+||volksverpetzer.de^
+||voxukraine.org^
+||yle.fi^
+||youturn.in^

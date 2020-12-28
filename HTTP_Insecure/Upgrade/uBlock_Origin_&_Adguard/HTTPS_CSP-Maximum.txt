@@ -1,0 +1,17 @@
+! Title: HTTP Insecure Upgrade - HTTPS Content-Security-Policy Maximum
+! License: The Unlicense (https://choosealicense.com/licenses/unlicense/)
+! Homepage: https://github.com/InnoScorpio/Special-Hosts
+! Issues: https://github.com/InnoScorpio/Special-Hosts
+! Expires: 8 hours
+! Version: 3 
+! Last Modified: August 29, 2020
+! Description: Intended for uBlock Origin and Adguard. Content-Security-Policy Rules enforced for HTTPS-only secure browsing.
+! Atrribution: Cybo1927 (https://raw.githubusercontent.com/Cybo1927/Hosts/master/Hosts, https://raw.githubusercontent.com/Cybo1927/Hosts/master/Extra/Ultimate%20Protection)
+! Use them at your own risk.
+! ====================================================================================================================
+! Try To Make HTTP Links HTTPS (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests)
+||*^$csp=upgrade-insecure-requests;
+! Block 'Mixed Content' / Loading Of HTTP On HTTPS Sites (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content)
+||*^$csp=block-all-mixed-content;
+! Prevent Any non-HTTPS connection
+||*^$csp=default-src https:

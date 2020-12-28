@@ -1,0 +1,13 @@
+! Behind-the-Scene Mitigation for uMatrix
+! Behind-the-scene network requests are network requests which uBlock or uMatrix cannot associate with a specific tab in your browser. These can be abused by extensions in your web browser or made by web pages using navigator.sendBeacon(), hyperlink auditing, etc. Block CSP reports and pings in uMatrix.
+! Use them at your own risk.
+! This list can cause unintended consequences.
+! =======================================================================================================================================
+! See https://github.com/gorhill/uBlock/wiki/Behind-the-scene-network-requests for guidance.
+behind-the-scene * * block
+behind-the-scene * doc block
+behind-the-scene * xhr block
+matrix-off: behind-the-scene false
+https-strict: behind-the-scene true
+no-workers: behind-the-scene true
+referrer-spoof: behind-the-scene true

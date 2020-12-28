@@ -1,0 +1,20 @@
+! Title: Anti Third Party HTTP (Cybo1927 version)
+! License: The Unlicense (https://choosealicense.com/licenses/unlicense/)
+! Homepage: https://github.com/InnoScorpio/Special-Hosts
+! Issues: https://github.com/InnoScorpio/Special-Hosts
+! Expires: 8 days
+! Version: 3
+! Description: Block third-party traffic from HTTP websites.
+! Attribution: Cybo1927 (https://raw.githubusercontent.com/Cybo1927/Hosts/master/Anti/Anti%20Third-Party%20HTTP)
+! ================================================================================================================================================================
+
+http://*^$third-party,all
+
+!#if (adguard && !ext_ublock)
+http://*^$third-party,empty,important
+!#endif
+
+! Try To Make HTTP Links HTTPS (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests)
+||*$csp='upgrade-insecure-requests';
+! Block 'Mixed Content' / Loading Of HTTP On HTTPS Sites (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content)
+||*$csp='block-all-mixed-content';
