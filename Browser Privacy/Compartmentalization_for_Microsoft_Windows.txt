@@ -246,8 +246,8 @@
 @@||youtu.be^$app=chrome.exe,important
 ! Vivaldi Browser (vivaldi.exe) - Facebook, Instagram, WhatsApp, and Yahoo websites and services only allowed.
 ||*^$app=vivaldi.exe,document,popup,important
-@@*$network,important,app=yandex.exe
-! Yandex Allow
+@@*$network,important,app=vivaldi.exe
+! Vivaldi Allow
 @@||vivaldi.com^$app=vivaldi.exe,important
 @@||vivaldi.net^$app=vivaldi.exe,important
 ! Facebook
