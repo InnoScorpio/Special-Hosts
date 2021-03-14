@@ -4,8 +4,8 @@
 ! License: The Unlicense (https://choosealicense.com/licenses/unlicense/)
 ! Homepage: https://github.com/InnoScorpio/Special-Hosts
 ! Issues: https://github.com/InnoScorpio/Special-Hosts
-! Version: 2
-! Last Modified: September 2, 2020
+! Version: 3
+! Last Modified: March 14, 2021
 ! Description: Incomplete. Blocklist of fact-checking websites. 
 ! Use them at your own risk.
 ! ====================================================================================================================================================================================
@@ -16,6 +16,7 @@
 ||altnews.in^
 ||aosfatos.org^
 ||apnews.com/APFactCheck^
+||apublica.org/tag/truco-no-congresso^
 ||bbc.com/news/reality_check^
 ||blackdotresearch.sg^
 ||blogs.oglobo.globo.com/eissomesmo^
@@ -28,6 +29,7 @@
 ||chequeado.com^
 ||climatefeedback.org^
 ||cnnchile.com/chilecheck^
+||colombiacheck.com^
 ||congressoemfoco.uol.com.br^
 ||correctiv.org^
 ||debunk.eu^
@@ -35,6 +37,7 @@
 ||demaskuok.lt^
 ||e-farsas.com^
 ||ellinikahoaxes.gr^
+||factcheck.afp.com/afp-canada^
 ||factcheck.ge^
 ||factcheck.org^
 ||factchecker.gr^
@@ -62,6 +65,7 @@
 ||laprensa.com.bo^
 ||lemonde.fr/les-decodeurs^
 ||mediabiasfactcheck.com^
+||memoria.ebc.com.br/hoax^
 ||mimikama.at^
 ||miniver.org^
 ||newschecker.in^
