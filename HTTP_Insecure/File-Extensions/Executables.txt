@@ -4,18 +4,18 @@
 ! Homepage: https://github.com/InnoScorpio/Special-Hosts
 ! Issues: https://github.com/InnoScorpio/Special-Hosts
 ! Expires: 8 hours
-! Version: 09.03.2020
-! Last Modified: September 3, 2020
-! Description: Not comprehensive or exhaustive. Executable File Extensions. Block dangerous content that can be manipulated through HTTP connections and potentially harmful to devices. Supports uBlock Origin and Adguard.
+! Version: 1
+! Last Modified: March 14, 2021
+! Description: Not comprehensive or exhaustive. Executable File Extensions. Block dangerous content that can be manipulated through HTTP connections and potentially harmful to devices. Supports uBlock Origin.
 ! Use them at your own risk.
 ! ============================================================================
-!#if ext_ublock
+!#if (!adguard)
 ! Due to uBlock Origin limitations, the rules below can only block URLs with the specific file extension only containing HTML content.
 ! Executable File extensions: exe, apk, apks, app, appx, appxbundle, elf, bin, com, bat, gadget, msi, msix, msixbundle, pif, msp, mst, msc, scr, hta, cpl, jar 
 /^http://.+(/.+)?/.+\.(?:(?:[eE][xX][eE])|(?:[pP][iI][fF])|(?:[aA][pP][kK][sS]?)|(?:([aA][pP][pP]|[mM][sS][iI])[xX]?([bB][uU][nN][dD][lL][eE])?)|(?:[bB][iI][nN])|(?:[cC][oO][mM])|(?:[bB][aA][tT])|(?:[gG][aA][dD][gG][eE][tT])|(?:[mM][sS]([tT]|[pP]|[cC]))|(?:[sS][cC][rR])|(?:[hH][tT][aA])|(?:[jJ][aA][rR])|(?:[cC][pP][lL]))([/#?].*)?$/$all
 !#endif
 
-!#if adguard
+!#if (adguard)
 ! Executable File extensions: exe, apk, apks, app, appx, appxbundle, elf, bin, com, bat, gadget, msi, msix, msixbundle, pif, msp, mst, msc, scr, hta, cpl, jar 
 /^http://.+(/.+)?/.+\.(?:(?:[eE][xX][eE])|(?:[pP][iI][fF])|(?:[aA][pP][kK][sS]?)|(?:([aA][pP][pP]|[mM][sS][iI])[xX]?([bB][uU][nN][dD][lL][eE])?)|(?:[bB][iI][nN])|(?:[cC][oO][mM])|(?:[bB][aA][tT])|(?:[gG][aA][dD][gG][eE][tT])|(?:[mM][sS]([tT]|[pP]|[cC]))|(?:[sS][cC][rR])|(?:[hH][tT][aA])|(?:[jJ][aA][rR])|(?:[cC][pP][lL]))([/#?].*)?$/$empty
 !#endif

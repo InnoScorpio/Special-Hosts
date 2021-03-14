@@ -4,12 +4,12 @@
 ! Homepage: https://github.com/InnoScorpio/Special-Hosts
 ! Issues: https://github.com/InnoScorpio/Special-Hosts
 ! Expires: 8 hours
-! Version: 09.03.2020
-! Last Modified: September 3, 2020
-! Description: Not comprehensive or exhaustive. Generic file extensions. Block dangerous content that can be manipulated through HTTP connections and potentially harmful to devices. Supports uBlock Origin and Adguard.
+! Version: 1
+! Last Modified: March 14, 2021
+! Description: Not comprehensive or exhaustive. Generic file extensions. Block dangerous content that can be manipulated through HTTP connections and potentially harmful to devices. Supports uBlock Origin.
 ! Use them at your own risk.
 ! ============================================================================
-!#if ext_ublock
+!#if (!adguard)
 ! Due to uBlock Origin limitations, the rules below can only block URLs with the specific file extension only containing HTML content.
 ! Common generic file extensions: cnf, conf, cfg, log, asc, txt, bak, bk, dat, dsk, raw, ini, json, yaml, htm, html, csv, tsv
 /^http://.+(/.+)?/.+\.(?:(?:[cC][oO]?[nN][fF])|(?:[cC][fF][gG])|(?:[lL][oO][gG])|(?:[aA][sS][cC])|(?:[tT][xX][tT])|(?:[bB][aA]?[kK])|(?:[iI][nN][iI])|(?:[jJ][sS][oO][nN])|(?:[hH][tT][mM][lL]?)|(?:[yY][aA][mM][lL])|(?:[dD][aA][tT])|(?:[dD][sS][kK])|(?:[rR][aA][wW])|(?:([cC]|[tT])[sS][vV]))([/#?].*)?$/$all
@@ -17,7 +17,7 @@
 /^http://.+(/.+){0,}/.+\.(?:(?:[aA][sS][pP][xX]?)|(?:[pP][hH][pP])|(?:[jJ][sS][pP])|(?:([iI]|[xX]|[mM])[hH][tT][mM][lL])|(?:[xX][mM][lL])|(?:[sS][aA][vV])|(?:[sS][qQ][lL]([iI][tT][eE])?([3])?)|(?:[rR][tT][fF])|(?:[rR][oO][mM]))([/#?].*)?$/$all
 !#endif
 
-!#if adguard
+!#if (adguard)
 ! Common generic file extensions: cnf, conf, cfg, log, asc, txt, bak, bk, dat, dsk, raw, ini, json, yaml, htm, html, csv, tsv
 /^http://.+(/.+)?/.+\.(?:(?:[cC][oO]?[nN][fF])|(?:[cC][fF][gG])|(?:[lL][oO][gG])|(?:[aA][sS][cC])|(?:[tT][xX][tT])|(?:[bB][aA]?[kK])|(?:[iI][nN][iI])|(?:[jJ][sS][oO][nN])|(?:[hH][tT][mM][lL]?)|(?:[yY][aA][mM][lL])|(?:[dD][aA][tT])|(?:[dD][sS][kK])|(?:[rR][aA][wW])|(?:([cC]|[tT])[sS][vV]))([/#?].*)?$/$empty
 ! Other  miscellousness extensions: asp, aspx, php, jsp, xhtml, ihtml, mhtml xml, sav, sql, sqlite, sqlite3, rtf, rom

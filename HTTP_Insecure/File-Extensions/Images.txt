@@ -4,18 +4,13 @@
 ! Homepage: https://github.com/InnoScorpio/Special-Hosts
 ! Issues: https://github.com/InnoScorpio/Special-Hosts
 ! Expires: 8 hours
-! Version: 09.03.2020
-! Last Modified: September 3, 2020
-! Description: Not comprehensive or exhaustive. Image file extensions. Block dangerous content that can be manipulated through HTTP connections and potentially harmful to devices. Supports uBlock Origin and Adguard.
+! Version: 1
+! Last Modified: March 14, 2021
+! Description: Not comprehensive or exhaustive. Image file extensions. Block dangerous content that can be manipulated through HTTP connections and potentially harmful to devices. Supports uBlock Origin.
 ! Use them at your own risk.
 ! ====================================================================================================================
-!#if ext_ublock
+!#if (!adguard)
 ! Due to uBlock Origin limitations, the rules below can only block URLs with the specific file extension only containing HTML content.
 ! Image File extensions: bmp, gif, jpeg, jpg, apng, png, psd, svg, svgv, tif, tiff, ico, djvu, djv, webp, hief, hiec
 /^http://.+(/.+)?/.+\.(?:(?:[bB][mM][pP])|(?:[gG][iI][fF])|(?:[jJ][pP][eE]?[gG])|(?:[aA]?[pP][nN][gG])|(?:[pP][sS][dD])|(?:[sS][vV][gG][vV]?)|(?:[tT][iI][fF][fF]?)|(?:[iI][cC][oO])|(?:[dD][jJ][vV][uU]?)|(?:[wW][eE][bB][pP])|(?:[hH][iI][eE]([fF]|[cC])))([/#?].*)?$/$all
-!#endif
-
-!#if adguard
-! Image File extensions: bmp, gif, jpeg, jpg, apng, png, psd, svg, svgv, tif, tiff, ico, djvu, djv, webp, hief, hiec
-/^http://.+(/.+)?/.+\.(?:(?:[bB][mM][pP])|(?:[gG][iI][fF])|(?:[jJ][pP][eE]?[gG])|(?:[aA]?[pP][nN][gG])|(?:[pP][sS][dD])|(?:[sS][vV][gG][vV]?)|(?:[tT][iI][fF][fF]?)|(?:[iI][cC][oO])|(?:[dD][jJ][vV][uU]?)|(?:[wW][eE][bB][pP])|(?:[hH][iI][eE]([fF]|[cC])))([/#?].*)?$/$empty
 !#endif

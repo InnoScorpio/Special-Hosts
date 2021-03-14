@@ -4,16 +4,16 @@
 ! Homepage: https://github.com/InnoScorpio/Special-Hosts
 ! Issues: https://github.com/InnoScorpio/Special-Hosts
 ! Expires: 8 hours
-! Version: 09.03.2020
-! Last Modified: September 3, 2020
-! Description: Not comprehensive or exhaustive. Level 3. Block dangerous content that can be manipulated through HTTP connections and potentially harmful to devices. Supports uBlock Origin and Adguard.
+! Version: 1
+! Last Modified: March 14, 2021
+! Description: Not comprehensive or exhaustive. Level 3. Block dangerous content that can be manipulated through HTTP connections and potentially harmful to devices. Supports uBlock Origin.
 ! Use them at your own risk.
 ! ============================================================================
 ! Level 1: Executables + System
 ! Level 2: Executables + System + Archives
 ! Level 3: Executables + System + Archives + Documents
 ! Level 4: Executables + System + Archives + Documents + Images + Media + Generic
-!#if ext_ublock
+!#if (!adguard)
 ! Executable File extensions: exe, apk, apks, app, appx, appxbundle, elf, bin, com, bat, gadget, msi, msix, msixbundle, pif, msp, mst, msc, scr, hta, cpl, jar 
 /^http://.+(/.+)?/.+\.(?:(?:[eE][xX][eE])|(?:[pP][iI][fF])|(?:[aA][pP][kK][sS]?)|(?:([aA][pP][pP]|[mM][sS][iI])[xX]?([bB][uU][nN][dD][lL][eE])?)|(?:[bB][iI][nN])|(?:[cC][oO][mM])|(?:[bB][aA][tT])|(?:[gG][aA][dD][gG][eE][tT])|(?:[mM][sS]([tT]|[pP]|[cC]))|(?:[sS][cC][rR])|(?:[hH][tT][aA])|(?:[jJ][aA][rR])|(?:[cC][pP][lL]))([/#?].*)?$/$all
 ! Common Microsoft Windows scripts: cmd, vb, vbs, vbe, jse, ws, wsf, wsc, wsh, ps1, ps1xml, ps2, ps2xml, psc1, psc2, msh, msh1, msh2, mshxml, msh1xml, msh2xml, settingcontent-ms
@@ -33,26 +33,4 @@
 /^http://.+(/.+)?/.+\.(?:(?:[pP]([oO]|[pP])[tT]([xX]|[mM])?)|(?:[pP][pP]([aA]|[sS])[mM])|(?:[pP][pP][sS]([xX]|[mM]))|(?:[oO][dD]([pP]|[sS]|[tT]))|(?:[sS][lL][dD]([xX]|[mM])))([/#?].*)?$/$all
 ! Microsoft Office Access extensions: mdb, adn, accdr, accdt, accda, mdw, accde, mam, maq, mar, mat, maf, laccdb, ade, adp, cdb, mda, mdn, mdt, mdf, mde, ldb
 /^http://.+(/.+)?/.+\.(?:(?:[aA][cC][cC][dD]([aA]|[tT]|[eE]|[rR]))|(?:[lL][aA][cC][cC][dD][bB])|(?:[aA][dD]([eE]|[pP]))|(?:([cC]|[lL])[dD][bB])|(?:[mM][aA]([mM]|[qQ]|[rR]|[tT]|[fF]))|(?:[mM][dD]([bB]|[tT]|[wW]|[fF]|[nN]|[aA])))([/#?].*)?$/$all
-!#endif
-
-!#if adguard
-! Executable File extensions: exe, apk, apks, app, appx, appxbundle, elf, bin, com, bat, gadget, msi, msix, msixbundle, pif, msp, mst, msc, scr, hta, cpl, jar 
-/^http://.+(/.+)?/.+\.(?:(?:[eE][xX][eE])|(?:[pP][iI][fF])|(?:[aA][pP][kK][sS]?)|(?:([aA][pP][pP]|[mM][sS][iI])[xX]?([bB][uU][nN][dD][lL][eE])?)|(?:[bB][iI][nN])|(?:[cC][oO][mM])|(?:[bB][aA][tT])|(?:[gG][aA][dD][gG][eE][tT])|(?:[mM][sS]([tT]|[pP]|[cC]))|(?:[sS][cC][rR])|(?:[hH][tT][aA])|(?:[jJ][aA][rR])|(?:[cC][pP][lL]))([/#?].*)?$/$empty
-! Common Microsoft Windows scripts: cmd, vb, vbs, vbe, jse, ws, wsf, wsc, wsh, ps1, ps1xml, ps2, ps2xml, psc1, psc2, msh, msh1, msh2, mshxml, msh1xml, msh2xml, settingcontent-ms
-/^http://.+(/.+)?/.+\.(?:(?:[cC][mM][dD])|(?:[vV][bB]([sS]|[eE])?)|(?:[jJ][sS][eE])|(?:[sS][eE][tT][tT][iI][nN][gG][cC][oO][nN][tT][eE][nN][tT][-][mM][sS])|(?:[wW][sS]([fF]|[hH]|[cC])?)|(?:[pP][sS][1]([xX][mM][lL])?)|(?:[pP][sS][2]([xX][mM][lL])?)|(?:[mM][sS][hH]([1]|[2])?([xX][mM][lL])?)|(?:[pP][sS][cC]([1]|[2])))([/#?].*)?$/$empty
-! Other Harmful Microsoft Windows shortcuts, handles, libraries: dll, inf, reg, chm, isp, lib, lnk, nsh, shb, shs, sys, vxd, iqy, bas, ocx, pcd, shs, url
-/^http://.+(/.+)?/.+\.(?:(?:[dD][lL][lL)|(?:[uU][rR][lL])|(?:[wW][iI][nN][fF])|(?:[rR][eE][gG])|(?:[cC][hH][mM])|(?:[iI][sS][pP])|(?:[iI][qQ][yY])|(?:[bB][aA][sS])|(?:[oO][cC][xX])|(?:[pP][cC][dD])|(?:[lL][iI][bB])|(?:[lL][nN][kK])|(?:[nN][sS][hH])|(?:[sS][hH]([bB]|[sS])|(?:[sS][yY][sS])|(?:[vV][xX][dD])))([/#?].*)?$/$empty
-! Common Archive file extensions: 7z, arj, deb, pkg, rar, rpm, tar.gz, gz, tar, z, zip, odex, dex, iso, img, so, dmg
-/^http://.+(/.+)?/.+\.(?:(?:[7][Zz])|(?:[aA][rR][jJ])|(?:[dD][eE][bB])|(?:[pP][kK][gG])|(?:[gG][zZ])|(?:[rR][aA][rR])|(?:[tT][aA][rR]([.][gG][zZ])?)|(?:[zZ]([iI][pP])?)|(?:[oO]?[dD][eE][xX])|(?:[iI]?[sS][oO])|(?:([iI]|[dD])[mM][gG]))([/#?].*)?$/$empty
-! Other Known Archive file extensions: lz, lzip, lzh, lha, lzx, vhd, vhdx, xpi, crx, tgz, bz2, bzip2, bz, bzip, cab, ipa, xap, sis, sisx
-/^http://.+(/.+)?/.+\.(?:(?:[[lL][zZ]([iI][pP]|[xX]|[hH])?)|(?:[lL][hH][aA])|(?:[tT][gG][zZ])|(?:[vV][hH][dD][xX]?)|(?:[xX][pP][iI])|(?:[cC][rR][xX])|(?:[bB][zZ]([iI][pP])?[[2]?)|(?:[cC][aA][bB])|(?:[iI][pP][aA])|(?:[xX][aA][pP])|(?:[sS][iI][sS][xX]?))([/#?].*)?$/$empty
-! Common document extensions: odp, key, ods, odt, pdf, tex, wpd, pub, xps, db, dbf, epub, mobi
-/^http://.+(/.+)?/.+\.(?:(?:[oO][dD]([pP]|[sS][tT]))|(?:[pP][dD][fF])|(?:[tT][eE][xX])|(?:[wW][pP][dD])|(?:[eE]?[pP][uU][bB])|(?:[xX][pP][sS])|(?:[kK][eE][yY])|(?:[dD][bB][fF]?)|(?:[mM][oO][bB][iI]))([/#?].*)?$/$empty
-! Microsoft Office Word extensions: docb, docm, dotm, dotx, dot, wbk, doc, docx
-! Microsoft Office Excel extensions: xls, xlsx, xlt, xlm, xlsm, xltx, xltm, xlsb, xla, xlam, xll, xlw
-/^http://.+(/.+)?/.+\.(?:(?:[dD][oO][cC]([bB]|[mM]|[xX])?)|(?:[dD][oO][tT]([mM]|[xX]?))|(?:[wW][bB][kK])|(?:[xX][lL][sS]([xX]|[mM]|[bB]?))|(?:[xX][lL][tT]([xX]|[mM]?))|(?:[xX][lL]([lL]|[wW]|[aA][mM]?)))([/#?].*)?$/$empty
-! Microsoft Office Powerpoint extensions: ppt, pptx, pot, pptm, potm, potx, ppam, ppsx, ppsm, sldx, sldm
-/^http://.+(/.+)?/.+\.(?:(?:[pP]([oO]|[pP])[tT]([xX]|[mM])?)|(?:[pP][pP]([aA]|[sS])[mM])|(?:[pP][pP][sS]([xX]|[mM]))|(?:[oO][dD]([pP]|[sS]|[tT]))|(?:[sS][lL][dD]([xX]|[mM])))([/#?].*)?$/$empty
-! Microsoft Office Access extensions: mdb, adn, accdr, accdt, accda, mdw, accde, mam, maq, mar, mat, maf, laccdb, ade, adp, cdb, mda, mdn, mdt, mdf, mde, ldb
-/^http://.+(/.+)?/.+\.(?:(?:[aA][cC][cC][dD]([aA]|[tT]|[eE]|[rR]))|(?:[lL][aA][cC][cC][dD][bB])|(?:[aA][dD]([eE]|[pP]))|(?:([cC]|[lL])[dD][bB])|(?:[mM][aA]([mM]|[qQ]|[rR]|[tT]|[fF]))|(?:[mM][dD]([bB]|[tT]|[wW]|[fF]|[nN]|[aA])))([/#?].*)?$/$empty
 !#endif

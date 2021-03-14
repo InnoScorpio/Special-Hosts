@@ -4,22 +4,14 @@
 ! Homepage: https://github.com/InnoScorpio/Special-Hosts
 ! Issues: https://github.com/InnoScorpio/Special-Hosts
 ! Expires: 8 hours
-! Version: 09.03.2020
-! Last Modified: September 3, 2020
-! Description: Not comprehensive or exhaustive. Operating System Scripts, Handles, and Library File Extensions. Block dangerous content that can be manipulated through HTTP connections and potentially harmful to devices. Supports uBlock Origin and Adguard.
+! Version: 1
+! Last Modified: March 14, 2021
+! Description: Not comprehensive or exhaustive. Operating System Scripts, Handles, and Library File Extensions. Block dangerous content that can be manipulated through HTTP connections and potentially harmful to devices. Supports uBlock Origin.
 ! ============================================================================
 ! Due to uBlock Origin limitations, the rules below can only block URLs with the specific file extension only containing HTML content.
 ! Common Microsoft Windows scripts: cmd, vb, vbs, vbe, jse, ws, wsf, wsc, wsh, ps1, ps1xml, ps2, ps2xml, psc1, psc2, msh, msh1, msh2, mshxml, msh1xml, msh2xml, settingcontent-ms
-!#if ext_ublock
+!#if (!adguard)
 /^http://.+(/.+)?/.+\.(?:(?:[cC][mM][dD])|(?:[vV][bB]([sS]|[eE])?)|(?:[jJ][sS][eE])|(?:[sS][eE][tT][tT][iI][nN][gG][cC][oO][nN][tT][eE][nN][tT][-][mM][sS])|(?:[wW][sS]([fF]|[hH]|[cC])?)|(?:[pP][sS][1]([xX][mM][lL])?)|(?:[pP][sS][2]([xX][mM][lL])?)|(?:[mM][sS][hH]([1]|[2])?([xX][mM][lL])?)|(?:[pP][sS][cC]([1]|[2])))([/#?].*)?$/$all
 ! Other Harmful Microsoft Windows shortcuts, handles, libraries: dll, inf, reg, chm, isp, lib, lnk, nsh, shb, shs, sys, vxd, iqy, bas, ocx, pcd, shs, url
 /^http://.+(/.+)?/.+\.(?:(?:[dD][lL][lL)|(?:[uU][rR][lL])|(?:[wW][iI][nN][fF])|(?:[rR][eE][gG])|(?:[cC][hH][mM])|(?:[iI][sS][pP])|(?:[iI][qQ][yY])|(?:[bB][aA][sS])|(?:[oO][cC][xX])|(?:[pP][cC][dD])|(?:[lL][iI][bB])|(?:[lL][nN][kK])|(?:[nN][sS][hH])|(?:[sS][hH]([bB]|[sS])|(?:[sS][yY][sS])|(?:[vV][xX][dD])))([/#?].*)?$/$all
-!#endif
-
-
-!#if adguard
-! Common Microsoft Windows scripts: cmd, vb, vbs, vbe, jse, ws, wsf, wsc, wsh, ps1, ps1xml, ps2, ps2xml, psc1, psc2, msh, msh1, msh2, mshxml, msh1xml, msh2xml, settingcontent-ms
-/^http://.+(/.+)?/.+\.(?:(?:[cC][mM][dD])|(?:[vV][bB]([sS]|[eE])?)|(?:[jJ][sS][eE])|(?:[sS][eE][tT][tT][iI][nN][gG][cC][oO][nN][tT][eE][nN][tT][-][mM][sS])|(?:[wW][sS]([fF]|[hH]|[cC])?)|(?:[pP][sS][1]([xX][mM][lL])?)|(?:[pP][sS][2]([xX][mM][lL])?)|(?:[mM][sS][hH]([1]|[2])?([xX][mM][lL])?)|(?:[pP][sS][cC]([1]|[2])))([/#?].*)?$/$empty
-! Other Harmful Microsoft Windows shortcuts, handles, libraries: dll, inf, reg, chm, isp, lib, lnk, nsh, shb, shs, sys, vxd, iqy, bas, ocx, pcd, shs, url
-/^http://.+(/.+)?/.+\.(?:(?:[dD][lL][lL)|(?:[uU][rR][lL])|(?:[wW][iI][nN][fF])|(?:[rR][eE][gG])|(?:[cC][hH][mM])|(?:[iI][sS][pP])|(?:[iI][qQ][yY])|(?:[bB][aA][sS])|(?:[oO][cC][xX])|(?:[pP][cC][dD])|(?:[lL][iI][bB])|(?:[lL][nN][kK])|(?:[nN][sS][hH])|(?:[sS][hH]([bB]|[sS])|(?:[sS][yY][sS])|(?:[vV][xX][dD])))([/#?].*)?$/$empty
 !#endif

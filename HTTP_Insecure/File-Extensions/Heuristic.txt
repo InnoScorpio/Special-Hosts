@@ -4,16 +4,12 @@
 ! Homepage: https://github.com/InnoScorpio/Special-Hosts
 ! Issues: https://github.com/InnoScorpio/Special-Hosts
 ! Expires: 8 hours
-! Version: 09.03.2020
-! Last Modified: September 3, 2020
-! Description: For all web files relevant to specific file extension, not meant to be accurate. Block dangerous content that can be manipulated through HTTP connections and potentially harmful to devices. Supports uBlock Origin and Adguard.
+! Version: 1
+! Last Modified: March 14, 2021
+! Description: For all web files relevant to specific file extension, not meant to be accurate. Block dangerous content that can be manipulated through HTTP connections and potentially harmful to devices. Supports uBlock Origin.
 ! Use them at your own risk.
 ! ============================================================================
-!#if ext_ublock
+!#if (!adguard)
 ! Due to uBlock Origin limitations, the rules below can only block URLs with the specific file extension only containing HTML content.
 /^http://.+(/.+)?/.+\.([a-zA-Z0-9-_]+)([/#?].*)?$/$all
-!#endif
-
-!#if adguard
-/^http://.+(/.+)?/.+\.([a-zA-Z0-9-_]+)([/#?].*)?$/$empty
 !#endif
