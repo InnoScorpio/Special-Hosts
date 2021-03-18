@@ -3,8 +3,8 @@
 ! Homepage: https://github.com/InnoScorpio/Special-Hosts
 ! Issues: https://github.com/InnoScorpio/Special-Hosts
 ! Expires: 8 hours
-! Version: 2
-! Last Modified: August 27, 2020
+! Version: 3
+! Last Modified: March 18, 2021
 ! Description: Includes a list of rules to prevent ad and tracking servers from compromising your privacy or bypassing Adguard software for iOS, Android, Windows, and Mac.
 ! Related: Cybo1927 - Remove uBO Attribute Tracking (https://raw.githubusercontent.com/Cybo1927/Hosts/master/Hosts)
 ! Use them at your own risk.
@@ -36,9 +36,9 @@ $$a[onclick="_gaq.push"]
 $$a[onclick="_gap"]
 $$a[onclick="track"]
 $$a[onclick="dataLayer.push"]
-$$iframe[referrerpolicy]
-$$a[referrerpolicy]
-$$a[ping]
+$$[referrerpolicy]
+$$[ping]
 $$a[href="javascript:void(0)"]
+$$a[onmouseup="setRealHref(event)"]
 ! Supported in Adguard for Windows 7.5.1
 ||*$ping
