@@ -3,8 +3,8 @@
 ! License: The Unlicense (https://choosealicense.com/licenses/unlicense/)
 ! Homepage: https://github.com/InnoScorpio/Special-Hosts
 ! Issues: https://github.com/InnoScorpio/Special-Hosts
-! Version: 5.1
-! Last Modified: September 8, 2020
+! Version: 5.2
+! Last Modified: March 18, 2021
 ! Related: gwarser (https://raw.githubusercontent.com/gwarser/filter-lists/master/lan-block.txt), https://github.com/ghacksuserjs/ghacks-user.js/wiki/4.2.3-uMatrix
 ! Description: Inadvisable. List of private IP addresses that should not be accessible via third-party from websites or browser extensions. 
 ! Use them at your own risk. This list can cause unintended consequences.
@@ -18,8 +18,8 @@
 * 0.0.0.0 * block
 * [::] * block
 ! == Destination-Only Addresses ===
-! 255.255.255.255/32 is destination-only, broadcast address.
-! NoScript uses the following destination-only broadcast address.
+! 255.255.255.255/32 is destination-only address, broadcast address.
+! NoScript uses the following destination-only address broadcast address.
 * 255.255.255.255 * block
 ! === Stateless Address AutoConfiguration or Link-Local Addresses ==== 
 ! 169.254.0.0/16 and fe80::/10 IP ranges is intended when your device is not set to static address or DHCP server. 
@@ -44,19 +44,26 @@
 ! === Hostnames associated with LAN ====
 ! List hostnames associated with private IP addresses for the LAN
 * airbox.home * block
+* airport * block
 * arcor.easybox * block
 * congstar.box * block
 * connect.box * block
 * easy.box * block
+* etxr * block
 * fritz.box * block
 * fritz.nas * block
+* fritz.repeater * block
 * giga.cube * block
 * hi.link * block
+* hitronhub.home * block
+* huaweimobilewifi.com * block
+* myfritz.box * block
 * router.asus.com * block
 * routerlogin.com * block
 * routerlogin.net * block
 * samsung.router * block
 * speedport.ip * block
+* tpwikinet.net * block
 ! === LAN Exclusions ===
 ! LAN exclusions for IP ranges and hostnames that are accessible through from first-party host or domain.
 ! First-party domain whitelisted only.
@@ -77,19 +84,27 @@
 255.255.255.255 255.255.255.255 * allow
 localhost localhost * allow
 airbox.home airbox.home * allow
+airport airport * allow
 arcor.easybox arcor.easybox * allow
+aterm.me aterm.me * allow
 congstar.box congstar.box * allow
 connect.box connect.box * allow
-easy.box easybox * allow
+easy.box easy.box * allow
+etxr etxr * allow 
 fritz.box fritz.box * allow
 fritz.nas fritz.nas * allow
+fritz.repeater fritz.repeater * allow
 giga.cube giga.cube * allow
 hi.link hi.link * allow
+hitronhub.home hitronhub.home * allow
+huaweimobilewifi.com huaweimobilewifi.com * allow
+myfritz.box myfritz.box * allow
 router.asus.com router.asus.com * allow 
 routerlogin.com routerlogin.com * allow
 routerlogin.net routerlogin.net * allow
 samsung.router samsung.router * allow
 speedport.ip speedport.ip * allow
+tplinkwifi.net tplinkwifi.net * allow
 ! === Behind-the-Scene Exclusions ===
 ! Allow browser extensions and browsers (i.e. Firefox, CSS Exfil Protection, and NoScript) to access traffic on LAN.
 behind-the-scene [::] * allow
@@ -109,17 +124,26 @@ behind-the-scene 172.31 * allow
 behind-the-scene 192.168 * allow
 behind-the-scene 255.255.255.255 * allow
 behind-the-scene localhost * allow
+behind-the-scene local * allow
 behind-the-scene airbox.home * allow
+behind-the-scene airport * allow
 behind-the-scene arcor.easybox * allow
+behind-the-scene aterm.me * allow
 behind-the-scene congstar.box * allow
 behind-the-scene connect.box * allow
 behind-the-scene easy.box * allow
+behind-the-scene etxr * allow
 behind-the-scene fritz.box * allow
 behind-the-scene fritz.nas * allow
+behind-the-scene fritz.repeater * allow
 behind-the-scene giga.cube * allow
 behind-the-scene hi.link * allow
+behind-the-scene hitronhub.home * allow
+behind-the-scene huaweimobilewifi.com * allow
+behind-the-scene myfritz.box * allow
 behind-the-scene router.asus.com * allow
 behind-the-scene routerlogin.com * allow
 behind-the-scene routerlogin.net * allow
 behind-the-scene samsung.router * allow
 behind-the-scene speedport.ip * allow
+behind-the-scene tplinkwiki.net * allow
